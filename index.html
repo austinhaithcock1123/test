@@ -691,7 +691,7 @@ button {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/menubackground.png') center/cover;
+    background: url('https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/menubackground.png') center/cover;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -2067,7 +2067,7 @@ button {
      
                 <div id="bottom-right-ui">
                     <div id="oxygen-display">
-                        <img src="https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/fa3.png" alt="Vent" class="vent-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/fa3.png" alt="Vent" class="vent-icon">
                         <span id="power-value">100</span><span class="percent-sign">%</span><span class="oxygen-unit">O<sub>2</sub></span>
                     </div>
                 </div>
@@ -2085,13 +2085,13 @@ button {
             <button id="play-sound-btn">PLAY SOUND</button>
    
             <video id="camera-static-video" loop muted playsinline>
-                <source src="https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/vedio/202512191935.webm" type="video/webm">
+                <source src="https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/vedio/202512191935.webm" type="video/webm">
             </video>
         </div>
 
 
         <div id="cutscene" class="hidden">
-            <img src="https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/cutscene.png" alt="Cutscene">
+            <img src="https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/cutscene.png" alt="Cutscene">
             <div class="cutscene-hint">Click to continue...</div>
         </div>
 
@@ -2102,9 +2102,9 @@ button {
 
  
         <div id="main-menu">
-            <img id="star-icon" class="hidden" src="https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/star.png" alt="Star">
-            <img id="star-icon-2" class="hidden" src="https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/star.png" alt="Star 2">
-            <img id="star-icon-3" class="hidden" src="https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/star.png" alt="Star 3">
+            <img id="star-icon" class="hidden" src="https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/star.png" alt="Star">
+            <img id="star-icon-2" class="hidden" src="https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/star.png" alt="Star 2">
+            <img id="star-icon-3" class="hidden" src="https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/star.png" alt="Star 3">
             
             <h1>FIVE<br>NIGHTS<br>AT<br>NOLAN</h1>
             <button id="start-game">NEW GAME</button>
@@ -2214,14 +2214,14 @@ button {
         
  
         <audio id="menu-music" loop>
-            <source src="https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/sounds/music3.ogg" type="audio/ogg">
+            <source src="https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/sounds/music3.ogg" type="audio/ogg">
         </audio>
 
    
         <div id="game-over" class="hidden">
   
             <video id="game-over-static" loop muted playsinline autoplay>
-                <source src="https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/vedio/202512191935.webm" type="video/webm">
+                <source src="https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/vedio/202512191935.webm" type="video/webm">
             </video>
             <div id="game-over-content">
                 <h2 id="game-over-text"></h2>
@@ -2292,8 +2292,6 @@ class GameState {
         // 注意：不重置 customNight 和 customAILevels，因为它们在 initGame 之前设置
     }
 }
-
-
 // 资源管理器
 class AssetManager {
     constructor() {
@@ -2348,39 +2346,39 @@ class AssetManager {
         
         // 从 Unity 提取的资源
         const imagePaths = {
-            office: `https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/original.png`,
-            cam1: `https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/Cam1.png`,
-            cam2: `https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/Cam2.png`,
-            cam3: `https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/Cam3.png`,
-            cam4: `https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/Cam4.png`,
-            cam5: `https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/Cam5.png`,
-            cam6: `https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/Cam6.png`,
-            cam7: `https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/Cam7.png`,
-            cam8: `https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/Cam8.png`,
-            cam9: `https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/Cam9.png`,
-            cam10: `https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/Cam10.png`,
-            cam11: `https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/Cam11.png`,
-            jumpscare: `https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/jump.png`, // EP跳杀图片
-            trumpJumpscare: `https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/jumptrump.png`, // Trump跳杀图片
-            hawkingJumpscare: `https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/scaryhawking.png`, // Hawking跳杀图片
+            office: `https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/original.png`,
+            cam1: `https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/Cam1.png`,
+            cam2: `https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/Cam2.png`,
+            cam3: `https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/Cam3.png`,
+            cam4: `https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/Cam4.png`,
+            cam5: `https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/Cam5.png`,
+            cam6: `https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/Cam6.png`,
+            cam7: `https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/Cam7.png`,
+            cam8: `https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/Cam8.png`,
+            cam9: `https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/Cam9.png`,
+            cam10: `https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/Cam10.png`,
+            cam11: `https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/Cam11.png`,
+            jumpscare: `https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/jump.png`, // EP跳杀图片
+            trumpJumpscare: `https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/jumptrump.png`, // Trump跳杀图片
+            hawkingJumpscare: `https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/scaryhawking.png`, // Hawking跳杀图片
         };
 
         const soundPaths = {
-            ambient: `https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/sounds/music.ogg`,
-            static: `https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/sounds/Static_sound.ogg`,
-            staticLoop: `https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/sounds/Static_sound.ogg`,
-            vents: `https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/sounds/vents.ogg`,
-            ventCrawling: `https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/sounds/vent-crawling.mp3`,
-            jumpscare: `https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/sounds/jumpcare.ogg`,
-            hawkingJumpscare: `https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/sounds/stephenjumpscare.ogg`, // Hawking跳杀音效
-            blip: `https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/sounds/Blip.ogg`,
-            win: `https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/sounds/winmusic.ogg`,
-            chimes: `https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/sounds/chimes.ogg`,
-            crank1: `https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/sounds/Crank1.ogg`,
-            crank2: `https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/sounds/Crank2.ogg`,
-            ekg: `https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/sounds/ekg.wav`,
-            hawking_shock: `https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/sounds/hawking_shock.wav`,
-            goldenstephenscare: `https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/sounds/goldenstephenscare.ogg`, // Golden 霍金音效
+            ambient: `https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/sounds/music.ogg`,
+            static: `https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/sounds/Static_sound.ogg`,
+            staticLoop: `https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/sounds/Static_sound.ogg`,
+            vents: `https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/sounds/vents.ogg`,
+            ventCrawling: `https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/sounds/vent-crawling.mp3`,
+            jumpscare: `https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/sounds/jumpcare.ogg`,
+            hawkingJumpscare: `https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/sounds/stephenjumpscare.ogg`, // Hawking跳杀音效
+            blip: `https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/sounds/Blip.ogg`,
+            win: `https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/sounds/winmusic.ogg`,
+            chimes: `https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/sounds/chimes.ogg`,
+            crank1: `https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/sounds/Crank1.ogg`,
+            crank2: `https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/sounds/Crank2.ogg`,
+            ekg: `https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/sounds/ekg.wav`,
+            hawking_shock: `https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/sounds/hawking_shock.wav`,
+            goldenstephenscare: `https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/sounds/goldenstephenscare.ogg`, // Golden 霍金音效
         };
 
         // 加载图片
@@ -3497,7 +3495,7 @@ class CameraSystem {
         // 显示霍金（如果激活且在cam6）
         if (hawkingActive && currentCam === 'cam6') {
             const hawkingImg = document.createElement('img');
-            hawkingImg.src = 'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/mrstephen.png';
+            hawkingImg.src = 'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/mrstephen.png';
             hawkingImg.style.position = 'absolute';
             hawkingImg.className = 'visible hawking-character';
             hawkingImg.style.zIndex = '3'; // Hawking 在最上层
@@ -3619,7 +3617,7 @@ class CameraSystem {
         
         // 添加地图图片
         const mapImg = document.createElement('img');
-        mapImg.src = 'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/FNAE-Map-layout.png';
+        mapImg.src = 'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/FNAE-Map-layout.png';
         mapImg.style.width = '100%';
         mapImg.style.height = 'auto';
         mapImg.style.display = 'block';
@@ -3739,7 +3737,7 @@ class CameraSystem {
         this.currentSoundToggle = !this.currentSoundToggle;
         
         // 创建并播放音频
-        const audio = new Audio(`https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/sounds/${soundFile}`);
+        const audio = new Audio(`https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/sounds/${soundFile}`);
         audio.play().catch(e => console.log('音频播放失败:', e));
         
         // 检查当前位置是否已经用完2次
@@ -4324,47 +4322,47 @@ class EnemyAI {
         
         // 每个摄像头使用的角色图片（根据距离办公室远近）
         this.characterImages = {
-            'cam11': 'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/enemyep1.png',
-            'cam10': 'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/ep1.png',
-            'cam1': 'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/ep4.png',
-            'cam9': 'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/enemyep1.png',
-            'cam8': 'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/enemyep1.png',
-            'cam7': 'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/enemyep1.png',
-            'cam6': 'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/enemyep1.png',
-            'cam5': 'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/enemyep4.png',
-            'cam4': 'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/ep1.png',
-            'cam3': 'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/ep4.png',
-            'cam2': 'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/enemyep1.png',
+            'cam11': 'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/enemyep1.png',
+            'cam10': 'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/ep1.png',
+            'cam1': 'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/ep4.png',
+            'cam9': 'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/enemyep1.png',
+            'cam8': 'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/enemyep1.png',
+            'cam7': 'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/enemyep1.png',
+            'cam6': 'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/enemyep1.png',
+            'cam5': 'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/enemyep4.png',
+            'cam4': 'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/ep1.png',
+            'cam3': 'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/ep4.png',
+            'cam2': 'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/enemyep1.png',
         };
         
         // Night 6 专用图片（带电眼）
         this.characterImagesNight6 = {
-            'cam11': 'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/enemyep1_night6.png',
-            'cam10': 'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/ep1_night6.png',
-            'cam1': 'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/ep4_night6.png',
-            'cam9': 'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/enemyep1_night6.png',
-            'cam8': 'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/enemyep1_night6.png',
-            'cam7': 'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/enemyep1_night6.png',
-            'cam6': 'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/enemyep1_night6.png',
-            'cam5': 'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/enemyep4_night6.png',
-            'cam4': 'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/ep1_night6.png',
-            'cam3': 'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/ep4_night6.png',
-            'cam2': 'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/enemyep1_night6.png',
+            'cam11': 'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/enemyep1_night6.png',
+            'cam10': 'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/ep1_night6.png',
+            'cam1': 'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/ep4_night6.png',
+            'cam9': 'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/enemyep1_night6.png',
+            'cam8': 'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/enemyep1_night6.png',
+            'cam7': 'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/enemyep1_night6.png',
+            'cam6': 'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/enemyep1_night6.png',
+            'cam5': 'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/enemyep4_night6.png',
+            'cam4': 'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/ep1_night6.png',
+            'cam3': 'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/ep4_night6.png',
+            'cam2': 'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/enemyep1_night6.png',
         };
         
         // 特朗普的图片配置（使用绝对路径）
         this.trumpImages = {
-            'cam10': 'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/trump3.png',
-            'cam11': 'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/trump3.png',
-            'cam9': 'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/trump.png',
-            'cam8': 'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/trump5.png',
-            'cam7': 'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/trump3.png',
-            'cam6': 'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/trump3.png',
-            'cam5': 'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/trump2.png',
-            'cam1': 'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/trump4.png',
-            'cam2': 'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/trump4.png',
-            'cam3': 'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/trump2.png',
-            'cam4': 'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/trump3.png',
+            'cam10': 'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/trump3.png',
+            'cam11': 'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/trump3.png',
+            'cam9': 'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/trump.png',
+            'cam8': 'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/trump5.png',
+            'cam7': 'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/trump3.png',
+            'cam6': 'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/trump3.png',
+            'cam5': 'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/trump2.png',
+            'cam1': 'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/trump4.png',
+            'cam2': 'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/trump4.png',
+            'cam3': 'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/trump2.png',
+            'cam4': 'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/trump3.png',
         };
         
         // 定义移动路径图（根据地图连接关系，只能向前移动）
@@ -5727,9 +5725,9 @@ class EnemyAI {
         
         // 设置警告图片
         if (this.hawking.warningLevel === 1) {
-            warningIcon.src = 'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/Warninglight.png';
+            warningIcon.src = 'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/Warninglight.png';
         } else if (this.hawking.warningLevel === 2) {
-            warningIcon.src = 'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/Warningheavy.png';
+            warningIcon.src = 'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/Warningheavy.png';
         }
     }
     
@@ -5794,7 +5792,7 @@ class EnemyAI {
         
         // 创建霍金图片（在房间里）
         const hawkingImg = document.createElement('img');
-        hawkingImg.src = 'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/mrstephen.png';
+        hawkingImg.src = 'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/mrstephen.png';
         hawkingImg.style.position = 'absolute';
         hawkingImg.style.left = '43.6%';
         hawkingImg.style.bottom = '27.4%';
@@ -5805,7 +5803,7 @@ class EnemyAI {
         
         // 创建导弹图片（从霍金位置飞向玩家）
         const missileImg = document.createElement('img');
-        missileImg.src = 'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/front.png';
+        missileImg.src = 'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/front.png';
         missileImg.style.position = 'absolute';
         missileImg.style.left = '25%';
         missileImg.style.top = '40%';
@@ -5823,7 +5821,7 @@ class EnemyAI {
         explosionImg.style.width = '50vw'; // 容器宽度
         explosionImg.style.height = '50vh'; // 容器高度
         explosionImg.style.zIndex = '4';
-        explosionImg.style.backgroundImage = 'url(https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/exp2.png)';
+        explosionImg.style.backgroundImage = 'url(https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/exp2.png)';
         explosionImg.style.backgroundSize = '400% auto'; // 4列，高度自适应
         explosionImg.style.backgroundRepeat = 'no-repeat';
         explosionImg.style.backgroundPosition = '0% 0%';
@@ -6274,11 +6272,11 @@ const getBasePath = () => {
 };
 
 const basePath = getBasePath();
-const normalBackground = `https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/menubackground.png`;
+const normalBackground = `https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/menubackground.png`;
 const scaryBackgrounds = [
-    `https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/scaryhawk.png`,
-    `https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/scaryep.png`,
-    `https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/scarytrump.png`
+    `https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/scaryhawk.png`,
+    `https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/scaryep.png`,
+    `https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/scarytrump.png`
 ];
 
 let scaryFaceInterval = null;
@@ -6952,7 +6950,7 @@ class Game {
         
         // 创建金色霍金图片
         const goldenImg = document.createElement('img');
-        goldenImg.src = 'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/goldenstephen.png';
+        goldenImg.src = 'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/goldenstephen.png';
         goldenImg.style.position = 'absolute';
         goldenImg.style.top = '50%';
         goldenImg.style.left = '50%';
@@ -7331,7 +7329,7 @@ class Game {
                         
                         // 创建胜利画面
                         const winScreen = document.createElement('img');
-                        winScreen.src = 'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/winscreen.png';
+                        winScreen.src = 'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/winscreen.png';
                         winScreen.style.width = '100%';
                         winScreen.style.height = '100%';
                         winScreen.style.objectFit = 'contain';
@@ -7419,7 +7417,7 @@ class Game {
                 
                 // 创建night6.png图片
                 const night6Image = document.createElement('img');
-                night6Image.src = 'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/night6.png';
+                night6Image.src = 'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/night6.png';
                 night6Image.style.width = '100%';
                 night6Image.style.height = '100%';
                 night6Image.style.objectFit = 'contain';
@@ -7868,46 +7866,46 @@ async function preloadGameAssets() {
     
     // 定义所有需要预加载的资源
     const imagePaths = [
-        'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/original.png',
-        'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/Cam1.png',
-        'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/Cam2.png',
-        'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/Cam3.png',
-        'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/Cam4.png',
-        'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/Cam5.png',
-        'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/Cam6.png',
-        'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/Cam7.png',
-        'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/Cam8.png',
-        'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/Cam9.png',
-        'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/Cam10.png',
-        'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/Cam11.png',
-        'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/jump.png',
-        'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/menubackground.png',
-        'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/cutscene.png',
-        'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/fa3.png',
-        'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/FNAE-Map-layout.png',
-        'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/enemyep1.png',
-        'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/ep1.png',
-        'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/ep4.png',
-        'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/enemyep4.png',
-        'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/scaryhawk.png',
-        'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/scaryep.png',
-        'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/scarytrump.png',
-        'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/winscreen.png',  // Night 5 胜利画面
-        'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/images/goldenstephen.png'  // Golden 霍金
+        'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/original1.png',
+        'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/Cam1.png',
+        'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/Cam2.png',
+        'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/Cam3.png',
+        'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/Cam4.png',
+        'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/Cam5.png',
+        'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/Cam6.png',
+        'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/Cam7.png',
+        'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/Cam8.png',
+        'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/Cam9.png',
+        'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/Cam10.png',
+        'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/Cam11.png',
+        'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/jump.png',
+        'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/menubackground.png',
+        'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/cutscene.png',
+        'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/fa3.png',
+        'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/FNAE-Map-layout.png',
+        'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/enemyep1.png',
+        'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/ep1.png',
+        'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/ep4.png',
+        'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/enemyep4.png',
+        'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/scaryhawk.png',
+        'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/scaryep.png',
+        'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/scarytrump.png',
+        'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/winscreen.png',  // Night 5 胜利画面
+        'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/goldenstephen.png'  // Golden 霍金
     ];
     
     const soundPaths = [
-        'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/sounds/music.ogg',
-        'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/sounds/music3.ogg',
-        'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/sounds/Static_sound.ogg',
-        'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/sounds/vents.ogg',
-        'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/sounds/jumpcare.ogg',
-        'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/sounds/Blip.ogg',
-        'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/sounds/winmusic.ogg',
-        'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/sounds/chimes.ogg',
-        'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/sounds/Crank1.ogg',
-        'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/sounds/Crank2.ogg',
-        'https://raw.githubusercontent.com/austinhaithcock1123/freedomgamingzone.github.io/main/five-nights-at-epsteins-s2/assets/sounds/goldenstephenscare.ogg'  // Golden 霍金音效
+        'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/sounds/music.ogg',
+        'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/sounds/music3.ogg',
+        'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/sounds/Static_sound.ogg',
+        'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/sounds/vents.ogg',
+        'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/sounds/jumpcare.ogg',
+        'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/sounds/Blip.ogg',
+        'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/sounds/winmusic.ogg',
+        'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/sounds/chimes.ogg',
+        'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/sounds/Crank1.ogg',
+        'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/sounds/Crank2.ogg',
+        'https://cdn.jsdelivr.net/gh/austinhaithcock1123/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/sounds/goldenstephenscare.ogg'  // Golden 霍金音效
     ];
     
     totalAssets = imagePaths.length + soundPaths.length;
