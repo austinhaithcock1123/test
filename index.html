@@ -2088,7 +2088,7 @@ button {
             <button id="play-sound-btn">PLAY SOUND</button>
    
             <video id="camera-static-video" loop muted playsinline>
-                <source src="https://raw.githubusercontent.com/hausproductions/test/refs/heads/main/vedio/staticvideo.mp4" type="video/mp4">
+                <source src="https://cdn.jsdelivr.net/gh/hausproductions/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/vedio/202512191935.mp4" type="video/mp4">
             </video>
         </div>
 
@@ -3192,9 +3192,8 @@ class CameraSystem {
                 this.cameraErrorLabel.classList.remove('active');
             }
             
-            // Stop static
-            this.stopStatic();
-            
+            // Keep base static overlay visible while camera is open.
+
             // Show map
             const cameraGrid = document.getElementById('camera-grid');
             if (cameraGrid) {
@@ -3369,23 +3368,23 @@ class CameraSystem {
             return;
         }
 
+        // Immediate switch so selected cam highlights right away.
+        this.game.state.currentCam = `cam${camNum}`;
+        this.updateView();
+        this.createCameraGrid();
+        this.updateShockButtonVisibility();
+
+        // Brief full-opacity static flash without delaying the cam switch.
         if (this.staticVideo) {
             this.staticVideo.classList.add('active', 'flash');
             this.staticVideo.currentTime = 0;
             this.staticVideo.play().catch(e => console.log('Video playback failed:', e));
-        }
 
-        setTimeout(() => {
-            this.game.state.currentCam = `cam${camNum}`;
-            this.updateView();
-            this.createCameraGrid();
-            this.updateShockButtonVisibility();
-
-            if (this.staticVideo) {
+            setTimeout(() => {
                 this.staticVideo.classList.remove('flash');
                 this.staticVideo.classList.add('active');
-            }
-        }, 1000);
+            }, 1000);
+        }
     }
 
     updateView() {
