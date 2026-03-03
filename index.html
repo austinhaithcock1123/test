@@ -3446,7 +3446,7 @@ class CameraSystem {
         // 显示霍金（如果激活且在cam6）
         if (hawkingActive && currentCam === 'cam6') {
             const hawkingImg = document.createElement('img');
-            hawkingImg.src = 'https://cdn.jsdelivr.net/gh/hausproductions/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/mrstephen.png';
+            hawkingImg.src = 'https://cdn.jsdelivr.net/gh/hausproductions/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/mrstephen-1.png';
             hawkingImg.style.position = 'absolute';
             hawkingImg.className = 'visible hawking-character';
             hawkingImg.style.zIndex = '3'; // Hawking 在最上层
@@ -5707,7 +5707,7 @@ class EnemyAI {
         
         // 创建霍金图片（在房间里）
         const hawkingImg = document.createElement('img');
-        hawkingImg.src = 'https://cdn.jsdelivr.net/gh/hausproductions/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/mrstephen.png';
+        hawkingImg.src = 'https://cdn.jsdelivr.net/gh/hausproductions/freedomgamingzone.github.io@main/five-nights-at-epsteins-s2/assets/images/mrstephen-1.png';
         hawkingImg.style.position = 'absolute';
         hawkingImg.style.left = '43.6%';
         hawkingImg.style.bottom = '27.4%';
@@ -6975,10 +6975,10 @@ class Game {
         } else if (type === 'night3') {
             // Night 3 教程：霍金
             tutorialContent.innerHTML = `
-                <h2>DEFEND YOURSELF AGAINST MRS GUHL</h2>
+                <h2>DEFEND YOURSELF AGAINST MR WEBBER</h2>
                 <p>
-                    MRS GUHL ALWAYS STAYS AT CAM 6 AND HE IS NOT AFFECTED BY THE AUDIO LURES. 
-                    ELECTROCUTE HER EVERY ONCE IN A WHILE TO PREVENT HIM FROM LEAVING CAM 6.
+                    MRS WEBBER ALWAYS STAYS AT CAM 6 AND HE IS NOT AFFECTED BY THE AUDIO LURES. 
+                    SHOCK HIM EVERY ONCE IN A WHILE TO PREVENT HIM FROM LEAVING CAM 6.
                 </p>
                 <button id="tutorial-got-it">GOT IT</button>
             `;
@@ -6992,12 +6992,11 @@ class Game {
             tutorialContent.innerHTML = `
                 <h2>DEFEND YOURSELF AGAINST THE HAUS</h2>
                 <p>
-                    THE HAUS ALWAYS STARTS AT CAM 11. USE THE CAMERA'S AUDIO LURE TO KEEP HAUS FAR AWAY FROM YOU. 
+                    THE HAUS ALWAYS STARTS AT CAM 11. USE THE PHONE SOUNDS TO KEEP HAUS FAR AWAY FROM YOU. 
                     MAKE SURE THE CAMERA YOU'RE PLAYING THE PHONE DINGS IN IS NEXT TO THE CAMERA WHERE HAUS IS. 
-                    PLAYING SOUND IN ONLY ONE SPOT WILL NOT WORK IF YOU DO IT TWICE OR MORE IN A ROW. 
                     USING THE AUDIO LURE TOO MUCH WILL LEAD TO THE CAMERAS BREAKING. 
                     TO FIX THEM HEAD TO THE CONTROL PANEL AND RESTART THE CAMERAS LIKE YOU JUST DID. 
-                    THE HAUS DOES NOT ATTACK THROUGH THE VENTS SO DON'T BOTHER CLOSING THEM FOR THIS NIGHT.
+                    THE HAUS DOES NOT ATTACK THROUGH THE VENTS SO DON'T BOTHER CLOSING THEM FOR HIM.
                 </p>
                 <button id="tutorial-got-it">GOT IT</button>
             `;
