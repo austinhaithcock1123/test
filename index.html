@@ -263,11 +263,10 @@ button {
 #current-scene {
     position: absolute;
     height: 100%;
-    width: 150%;
+    width: 100%;
     object-fit: cover;
     left: 0;
     top: 0;
-    transition: left 0.05s linear;
     display: block;
 }
 
@@ -509,6 +508,19 @@ button {
 
 #camera-panel.transitioning {
     background-image: none !important;
+}
+
+/* Camera ambience overlay */
+#camera-static-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: 0;
 }
 
 /* 当前摄像头标签 */
@@ -3072,8 +3084,7 @@ class UIManager {
     }
 
     updateViewPosition(viewPosition) {
-        const offset = -viewPosition * 50;
-        this.currentSceneImg.style.left = `${offset}%`;
+        this.currentSceneImg.style.left = '0';
         this.updateHotspotVisibility(viewPosition);
     }
 }
@@ -3357,78 +3368,11 @@ class CameraSystem {
             console.log('Camera system is offline! Cannot switch cameras.');
             return;
         }
-        
-        // Add transition state, hide background image
-        this.cameraPanel.classList.add('transitioning');
-        
-        // Hide map
-        const cameraGrid = document.getElementById('camera-grid');
-        if (cameraGrid) {
-            cameraGrid.style.display = 'none';
-        }
-        
-        // 隐藏角色
-        const characterOverlay = document.getElementById('character-overlay');
-        if (characterOverlay) {
-            characterOverlay.style.display = 'none';
-        }
-        
-        // 暂时降低循环静态音的音量
-        this.game.assets.setSoundVolume('staticLoop', 0.1);
-        
-        // 播放正常音量的静态音效
-        this.game.assets.playSound('static', false, 1.0);
-        
-        // 1000ms 后停止静态音效
-        setTimeout(() => {
-            this.game.assets.stopSound('static');
-        }, 1000);
-        
-        // Show static effect
-        this.startStatic();
-        
-        // Switch camera after 500ms
-        setTimeout(() => {
-            // If camera already failed, stop switch animation, show failure effect
-            if (this.game.state.cameraFailed) {
-                console.log('Camera failed during switch, showing failure effect');
-                this.showCameraFailure();
-                return;
-            }
-            
-            this.game.state.currentCam = `cam${camNum}`;
-            this.updateView();
-            this.createCameraGrid();
-            
-            // After another 500ms fade out static, restore background
-            setTimeout(() => {
-                // Check again if failed
-                if (this.game.state.cameraFailed) {
-                    console.log('Camera failed during switch, showing failure effect');
-                    this.showCameraFailure();
-                    return;
-                }
-                
-                this.stopStatic();
-                this.cameraPanel.classList.remove('transitioning');
-                
-                // 显示地图
-                if (cameraGrid) {
-                    cameraGrid.style.display = 'block';
-                }
-                
-                // 显示角色
-                if (characterOverlay) {
-                    characterOverlay.style.display = 'block';
-                }
-                
-                // 更新电击按钮显示（根据当前摄像头）
-                this.updateShockButtonVisibility();
-                
-                // 恢复循环静态音的音量
-                this.game.assets.setSoundVolume('staticLoop', 0.3);
-            }, 500);
-        }, 500);
+
+        this.game.state.currentCam = `cam${camNum}`;
+        this.updateView();
+        this.createCameraGrid();
+        this.updateShockButtonVisibility();
     }
 
     updateView() {
@@ -3914,81 +3858,15 @@ class CameraSystem {
     
     // EP移动时的过场动画
     playMovementTransition() {
-        console.log('Playing movement transition...');
-        
-        // 如果摄像头已经故障，不播放动画
+        // Keep feed stable: no static flash, no panel transition.
         if (this.game.state.cameraFailed) {
-            console.log('Camera already failed, skipping movement transition');
             return;
         }
-        
-        // 添加过场状态
-        this.cameraPanel.classList.add('transitioning');
-        
-        // 隐藏地图
-        const cameraGrid = document.getElementById('camera-grid');
-        if (cameraGrid) {
-            cameraGrid.style.display = 'none';
-        }
-        
-        // 隐藏角色
-        const characterOverlay = document.getElementById('character-overlay');
-        if (characterOverlay) {
-            characterOverlay.style.display = 'none';
-        }
-        
-        // 暂时降低循环静态音的音量
-        this.game.assets.setSoundVolume('staticLoop', 0.1);
-        
-        // 播放正常音量的静态音效
-        this.game.assets.playSound('static', false, 1.0);
-        
-        // 1000ms 后停止静态音效
-        setTimeout(() => {
-            this.game.assets.stopSound('static');
-        }, 1000);
-        
-        // 显示雪花效果
-        this.startStatic();
-        
-        // 500ms 后更新显示
-        setTimeout(() => {
-            // 如果摄像头已经故障，停止动画并显示故障效果
-            if (this.game.state.cameraFailed) {
-                console.log('Camera failed during movement transition, showing failure effect');
-                this.showCameraFailure();
-                return;
-            }
-            
-            this.updateCharacterDisplay();
-            
-            // 再过 500ms 淡出雪花，恢复背景
-            setTimeout(() => {
-                // 如果摄像头已经故障，停止动画并显示故障效果
-                if (this.game.state.cameraFailed) {
-                    console.log('Camera failed during movement transition, showing failure effect');
-                    this.showCameraFailure();
-                    return;
-                }
-                
-                this.stopStatic();
-                this.cameraPanel.classList.remove('transitioning');
-                
-                // 显示地图
-                if (cameraGrid) {
-                    cameraGrid.style.display = 'block';
-                }
-                
-                // 显示角色
-                if (characterOverlay) {
-                    characterOverlay.style.display = 'block';
-                }
-                
-                // 恢复循环静态音的音量
-                this.game.assets.setSoundVolume('staticLoop', 0.3);
-            }, 500);
-        }, 500);
+
+        this.updateCharacterDisplay();
+        this.updateShockButtonVisibility();
     }
+
     
     // 电击霍金
     shockHawking() {
@@ -6443,12 +6321,23 @@ class Game {
 
     getNightCodeMap() {
         return {
-            '21947': 2,
-            '34821': 3,
-            '47295': 4,
-            '59316': 5,
-            '64028': 6
+            2: ['21947', '91532', '27410'],
+            3: ['34821', '60294', '78315'],
+            4: ['47295', '15863', '42970'],
+            5: ['59316', '84027', '36591'],
+            6: ['64028', '19754', '52683'],
+            7: ['77331'] // Private custom-night code
         };
+    }
+
+    getNightByCode(code) {
+        const codeMap = this.getNightCodeMap();
+        for (const [nightText, codes] of Object.entries(codeMap)) {
+            if (codes.includes(code)) {
+                return parseInt(nightText);
+            }
+        }
+        return null;
     }
 
     showNextNightCode() {
@@ -6457,10 +6346,10 @@ class Game {
         }
 
         const nextNight = this.state.currentNight + 1;
-        const codeEntry = Object.entries(this.getNightCodeMap()).find(([, night]) => night === nextNight);
-        if (!codeEntry) return;
+        const codes = this.getNightCodeMap()[nextNight];
+        if (!codes || codes.length === 0) return;
 
-        const [code] = codeEntry;
+        const code = codes[Math.floor(Math.random() * codes.length)];
         const codeBanner = document.createElement('div');
         codeBanner.style.position = 'fixed';
         codeBanner.style.top = '50%';
@@ -6474,14 +6363,14 @@ class Game {
         codeBanner.style.fontSize = '24px';
         codeBanner.style.zIndex = '120000';
         codeBanner.style.textAlign = 'center';
-        codeBanner.innerHTML = `NIGHT ${nextNight} CODE:<br><span style="font-size: 36px; letter-spacing: 6px;">${code}</span>`;
+        codeBanner.innerHTML = `Here is your private game code for restoring progress to this night- Make sure you save.<br><span style="font-size: 36px; letter-spacing: 6px;">${code}</span>`;
         document.body.appendChild(codeBanner);
 
         setTimeout(() => {
             if (codeBanner.parentNode) {
                 codeBanner.remove();
             }
-        }, 3500);
+        }, 4500);
     }
 
     jumpToNightByCode() {
@@ -6494,10 +6383,26 @@ class Game {
             return;
         }
 
-        const nightCodeMap = this.getNightCodeMap();
-        const targetNight = nightCodeMap[trimmedCode];
+        const targetNight = this.getNightByCode(trimmedCode);
         if (!targetNight) {
             alert('Invalid code.');
+            return;
+        }
+
+        if (targetNight === 7) {
+            this.mainMenu.classList.add('hidden');
+            if (this.volumeBtn) this.volumeBtn.classList.add('hidden');
+            if (this.volumePanel) this.volumePanel.classList.add('hidden');
+
+            const menuMusic = document.getElementById('menu-music');
+            if (menuMusic) {
+                menuMusic.pause();
+                menuMusic.currentTime = 0;
+                menuMusic.loop = false;
+            }
+
+            this.enemyAI.reset();
+            this.startCustomNight();
             return;
         }
 
