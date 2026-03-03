@@ -3015,20 +3015,16 @@ class UIManager {
         const ventsBtn = document.getElementById('vents-btn');
         const cameraBtn = document.getElementById('camera-btn');
         
-        // console.log('🔍 updateHotspotVisibility - viewPosition:', viewPosition);
-        
-        // Show control panel when view is at far left (viewPosition = 0)
+        // Keep both side menus permanently accessible on one fixed screen,
+        // so players don't need to pan all the way left/right to use them.
         if (ventsBtn) {
-            ventsBtn.style.opacity = viewPosition < 0.15 ? '1' : '0';
-            ventsBtn.style.pointerEvents = viewPosition < 0.15 ? 'auto' : 'none';
+            ventsBtn.style.opacity = '1';
+            ventsBtn.style.pointerEvents = 'auto';
         }
         
-        // Show camera button when view is at far right (viewPosition = 1)
         if (cameraBtn) {
-            const isVisible = viewPosition > 0.85;
-            cameraBtn.style.opacity = isVisible ? '1' : '0';
-            cameraBtn.style.pointerEvents = isVisible ? 'auto' : 'none';
-            // console.log('📷 Camera button - opacity:', cameraBtn.style.opacity, 'pointerEvents:', cameraBtn.style.pointerEvents);
+            cameraBtn.style.opacity = '1';
+            cameraBtn.style.pointerEvents = 'auto';
         }
     }
 
